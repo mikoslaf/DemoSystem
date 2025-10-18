@@ -15,13 +15,13 @@ namespace DemoSystem.Library.Effects
         }
         public void Render(Graphics g, int width, int height, int localFrame, int GlobalFrame)
         {
-            g.FillEllipse(
+             g.FillEllipse(
                 _brush,
                 (_xOffSet + width) / 2 - localFrame,
-                (_yOffSet + width) / 22 - localFrame,
+                (_yOffSet + height) / 2 - localFrame,
                 localFrame * 2,
                 localFrame * 2
-                );
+                );;
         }
     }
 }

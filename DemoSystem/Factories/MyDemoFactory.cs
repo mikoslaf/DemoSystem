@@ -9,15 +9,21 @@ namespace DemoSystem.Factories
         {
             Demo demo = new();
 
-            var moment1 = new Moment(120);
-            moment1.AddEffect(effect: new GrowingCircle(Brushes.Blue));
-            moment1.AddEffect(effect: new GrowingCircle(Brushes.Red, xOffSet: -100, yOffset: -100));
+            var momnet0 = new Moment(5000);
+            momnet0.AddEffect(effect: new Puzzle(@"C:\Users\Lenovo\Documents\img.png"));
+            // Puzzle(@"C:\Users\Lenovo\Documents\img.png", 20)
+            // new GrowingCircle(Brushes.Red, 0 ,0)
+            demo.AddMoment(momnet0);
 
-            demo.AddMoment(moment1);
+            //var moment1 = new Moment(120);
+            //moment1.AddEffect(effect: new GrowingCircle(Brushes.Blue));
+            //moment1.AddEffect(effect: new GrowingCircle(Brushes.Red, xOffSet: 100, yOffset: 100));
 
-            var moment2 = new Moment(120);
-            moment2.AddEffect(effect: new GrowingCircle(Brushes.Green));
-            demo.AddMoment(moment2);
+            //demo.AddMoment(moment1);
+
+            //var moment2 = new Moment(120);
+            //moment2.AddEffect(effect: new GrowingCircle(Brushes.Green));
+            //demo.AddMoment(moment2);
 
 
             return demo;
