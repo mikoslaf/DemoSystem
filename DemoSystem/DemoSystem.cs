@@ -23,7 +23,7 @@ namespace DemoSystem
 
         private void DemoSystem_Paint(object sender, PaintEventArgs e)
         {
-            _demo.Render(e.Graphics);
+            _demo.Render(e.Graphics, this.Width, this.Height);
 
         }
     }
