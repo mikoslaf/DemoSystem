@@ -20,7 +20,9 @@ namespace DemoSystem.Library
             }
 
             _localFrame++;
-            return _localFrame < _frameCount;
+            bool cont = _localFrame < _frameCount;
+            if(!cont) _localFrame = 0;
+            return cont;
         }
 
         internal void AddEffect(IEffect effect)

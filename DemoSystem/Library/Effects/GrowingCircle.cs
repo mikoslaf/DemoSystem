@@ -3,12 +3,22 @@ namespace DemoSystem.Library.Effects
 {
     internal class GrowingCircle : IEffect
     {
+        private Brush _brush = Brushes.Blue;
+        private int _xOffSet;
+        private int _yOffSet;
+
+        public GrowingCircle(Brush brush, int xOffSet = 0, int yOffset = 0)
+        {
+            _brush = brush;
+            _xOffSet = xOffSet;
+            _yOffSet = yOffset;
+        }
         public void Render(Graphics g, int width, int height, int localFrame, int GlobalFrame)
         {
             g.FillEllipse(
-                Brushes.Blue,
-                width / 2 - localFrame,
-                height / 2 - localFrame,
+                _brush,
+                (_xOffSet + width) / 2 - localFrame,
+                (_yOffSet + width) / 22 - localFrame,
                 localFrame * 2,
                 localFrame * 2
                 );
