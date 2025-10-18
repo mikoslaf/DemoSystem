@@ -34,16 +34,17 @@
             // 
             // timer1
             // 
+            timer1.Enabled = true;
             timer1.Interval = 50;
             timer1.Tick += timer1_Tick;
             // 
-            // Form1
+            // DemoSystem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             DoubleBuffered = true;
-            Name = "Form1";
+            Name = "DemoSystem";
             Text = "DemoSystem";
             Paint += DemoSystem_Paint;
             ResumeLayout(false);

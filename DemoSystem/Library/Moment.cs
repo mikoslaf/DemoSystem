@@ -22,5 +22,10 @@ namespace DemoSystem.Library
             _localFrame++;
             return _localFrame < _frameCount;
         }
+
+        internal void AddEffect(IEffect effect)
+        {
+            _effects.Add(effect);
+        }
     }
 }
